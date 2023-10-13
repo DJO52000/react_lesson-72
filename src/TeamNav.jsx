@@ -6,10 +6,16 @@ export function TeamNav() {
         <nav>
             <ul>
                 <li>
-                    <Link to="/team/joe">Team - Joe</Link>
+                    <Link to="joe">Team - Joe</Link>
                 </li>
                 <li>
-                    <Link to="/team/sally">Team - Sally</Link>
+                    <Link to="sally">Team - Sally</Link>
+                </li>
+                <li>
+                    <Link to="..">.. Route</Link>
+                </li>
+                <li>
+                    <Link to=".." relative="path">.. Path</Link>
                 </li>
             </ul>
         </nav>
