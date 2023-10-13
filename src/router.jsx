@@ -10,10 +10,14 @@ import { TeamNav } from "./TeamNav"
 export const router = createBrowserRouter([
     {
         element: <NavLayout />,
+        errorElement: <h1>Error</h1>,
         children: [
             { path: "/", element: <Home /> },
-            { path: "/store", element: <Store /> },
-            { path: "/about", element: <About /> },
+            {
+                path: "/store",
+                errorElement: <h1>Error</h1>,
+                element: <Store />,
+            },
             { path: "/about", element: <About /> },
             {
                 path: "/team",
@@ -41,7 +45,7 @@ function TeamNavLayout() {
     return (
         <>
             <TeamNav />
-            <Outlet context="Hi from Outlet"/>
+            <Outlet context="Hi from Outlet" />
         </>
     )
 }

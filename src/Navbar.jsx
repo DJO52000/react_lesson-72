@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 //GO AROUND REFRESH PAGE Y USE LINK
 export function Navbar() {
@@ -6,16 +6,17 @@ export function Navbar() {
         <nav>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    {/* NavLink have automatically build in active link func., also can pass func inside*/}
+                    <NavLink to="/">Home</NavLink>
                 </li>
                 <li>
-                    <Link to="/about">About</Link>
+                    <NavLink to="/about">About</NavLink>
                 </li>
                 <li>
-                    <Link to="/store">Store</Link>
+                    <NavLink to="/store">Store</NavLink>
                 </li>
                 <li>
-                    <Link to="/team">Team</Link>
+                    <NavLink to="/team" end>Team</NavLink>
                 </li>
             </ul>
         </nav>
